@@ -231,6 +231,7 @@ h1 em {
 .roundtrip-mini i b { display: inline; margin-right: 5px; color: var(--green); font-size: 10px; }
 .roundtrip-mini small { display: block; padding-left: 32px; }
 .compare-price { font: 700 24px var(--latin); }
+.compare-price small { display: block; margin-top: 4px; font: 500 10px var(--sans); }
 .compare-price.muted { font-size: 17px; opacity: .55; }
 .status {
   justify-self: start;
