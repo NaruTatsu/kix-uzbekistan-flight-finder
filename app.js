@@ -3,15 +3,24 @@ const googleFlightsUrl = "https://www.google.com/travel/flights/search?tfs=CBwQA
 const tripUrl = "https://jp.trip.com/flights/showfarefirst?dcity=osa&acity=tas&ddate=2026-09-21&rdate=2026-09-26&dairport=kix&triptype=rt&class=y&lowpricesource=searchform&quantity=4&searchboxarg=t&nonstoponly=off&locale=ja-JP&curr=JPY";
 const kayakUrl = "https://www.kayak.co.jp/flights/KIX-TAS/2026-09-21/2026-09-26/4adults?fs=fdDir%3Dfalse&sort=price_a";
 const skyscannerUrl = "https://www.skyscanner.jp/transport/flights/kix/tas/260921/260926/?adultsv2=4&cabinclass=economy&rtn=1&preferdirects=false";
+const skyscannerAirChinaUrl = "https://www.skyscanner.jp/transport/flights/kix/tas/260921/260926/config/13068-2609211400--32690-1-16759-2609221940%7C16759-2609262100--32690-1-13068-2609272030?adultsv2=4&cabinclass=economy&rtn=1&preferdirects=false";
 
 const flights = [
   {
-    airline: "Air China · KAYAK",
+    airline: "Air China · Skyscanner → TeaFlight",
     outbound: { time: "9/21 14:00 KIX → 9/22 19:40 TAS", duration: "33時間40分", transit: "PEK 23時間15分", alert: "深夜・翌日まで" },
     inbound: { time: "9/26 21:00 TAS → 9/27 20:30 KIX", duration: "19時間30分", transit: "北京経由", alert: "深夜・翌日着" },
-    hours: 33.7, stops: 1, price: 484344, perPerson: 121086,
-    tags: ["4席実測最安", "大人4名入力済み", "長時間乗継"], best: true,
-    url: kayakUrl
+    hours: 33.7, stops: 1, price: 477120, perPerson: 119280,
+    tags: ["4席実測最安", "便まで入力済み", "長時間乗継"], best: true,
+    url: skyscannerAirChinaUrl
+  },
+  {
+    airline: "Air China · Skyscanner → Gotogate",
+    outbound: { time: "9/21 14:00 KIX → 9/22 19:40 TAS", duration: "33時間40分", transit: "PEK 23時間15分", alert: "深夜・翌日まで" },
+    inbound: { time: "9/26 21:00 TAS → 9/27 20:30 KIX", duration: "19時間30分", transit: "PEK 11時間05分", alert: "深夜・翌日着" },
+    hours: 33.7, stops: 1, price: 484906, perPerson: 121227,
+    tags: ["Gotogate実測", "機内・受託手荷物込み表示", "便まで入力済み"],
+    url: skyscannerAirChinaUrl
   },
   {
     airline: "Air China · Trip.com",
@@ -41,14 +50,18 @@ const flights = [
 
 const searches = {
   meta: [
-    ["01", "KAYAK", "4名総額 ¥484,344・すべて入力済み", kayakUrl],
-    ["02", "Trip.com", "4名総額 ¥488,400・すべて入力済み", tripUrl],
-    ["03", "Google Flights", "4名総額 ¥823,920・すべて入力済み", googleFlightsUrl],
-    ["04", "Skyscanner", "4名・日程入力済み（CAPTCHA後に表示）", skyscannerUrl],
-    ["05", "Kiwi.com", "4名・日程・区間入力済み", "https://www.kiwi.com/ja/search/results/osaka-japan/tashkent-uzbekistan/2026-09-21/2026-09-26?adults=4"],
-    ["06", "momondo", "4名・日程・区間入力済み", "https://www.momondo.jp/flight-search/KIX-TAS/2026-09-21/2026-09-26/4adults?sort=price_a"],
-    ["07", "Expedia", "4名・日程・区間をURLに設定", "https://www.expedia.co.jp/Flights-Search?flight-type=on&mode=search&trip=roundtrip&leg1=from:KIX,to:TAS,departure:2026-09-21TANYT&leg2=from:TAS,to:KIX,departure:2026-09-26TANYT&options=cabinclass:economy&fromDate=2026-09-21&toDate=2026-09-26&adult=4"],
-    ["08", "Booking.com Flights", "4名・日程・区間をURLに設定", "https://www.booking.com/flights/index.ja.html?type=ROUNDTRIP&cabinClass=ECONOMY&adults=4&from=KIX.AIRPORT&to=TAS.AIRPORT&depart=2026-09-21&return=2026-09-26"]
+    ["01", "Skyscanner：最安便", "4名総額 ¥477,120・便まで入力済み", skyscannerAirChinaUrl],
+    ["02", "Gotogate", "Skyscanner内実測 ¥484,906・便まで入力済み", skyscannerAirChinaUrl],
+    ["03", "KAYAK", "Gotogate ¥121,086/人・18販売元を比較", kayakUrl],
+    ["04", "Trip.com", "直検索4名総額 ¥488,400・すべて入力済み", tripUrl],
+    ["05", "Google Flights", "4名総額 ¥823,920・すべて入力済み", googleFlightsUrl],
+    ["06", "Flightnetwork", "Skyscanner内実測 ¥492,683・便まで入力済み", skyscannerAirChinaUrl],
+    ["07", "Expedia", "Skyscanner内実測 ¥504,640・便まで入力済み", skyscannerAirChinaUrl],
+    ["08", "Booking.com Flights", "Skyscanner内実測 ¥507,154・便まで入力済み", skyscannerAirChinaUrl],
+    ["09", "エアトリ", "Skyscanner内実測 ¥504,640・便まで入力済み", skyscannerAirChinaUrl],
+    ["10", "Kiwi.com", "4名・日程・区間入力済み", "https://www.kiwi.com/ja/search/results/osaka-japan/tashkent-uzbekistan/2026-09-21/2026-09-26?adults=4"],
+    ["11", "momondo", "4名・日程・区間入力済み", "https://www.momondo.jp/flight-search/KIX-TAS/2026-09-21/2026-09-26/4adults?sort=price_a"],
+    ["12", "TeaFlight", "Skyscanner内実測 ¥477,120・便まで入力済み", skyscannerAirChinaUrl]
   ],
   airline: [
     ["CA", "Air China", "最安便の直販確認先・フォーム動作確認済み", "https://www.airchina.jp/JP/JP/Home"],
