@@ -128,6 +128,9 @@ h1 em {
   font-size: 11px;
   font-weight: 700;
 }
+.freshness b,
+.freshness span { display: block; }
+.freshness span { margin-top: 4px; font-weight: 500; line-height: 1.55; }
 .freshness.is-fresh { background: var(--mint); }
 .freshness.is-stale { color: white; background: var(--orange); }
 .hero-visual {

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20260621-6">
+  <link rel="stylesheet" href="./styles.css?v=20260627-rt1">
 </head>
 <body>
   <div class="noise"></div>
@@ -18,7 +18,7 @@
       <span>KIX Flight Finder</span>
     </a>
     <nav aria-label="メインナビゲーション">
-      <a href="#evidence">実測比較</a>
+      <a href="#evidence">最新確認</a>
       <a href="#fair-price">適正価格</a>
       <a href="#outlook">値動き予測</a>
       <a href="#shortlist">候補</a>
@@ -38,12 +38,12 @@
       <div class="hero-copy">
         <p class="eyebrow">2026 · AUTUMN ESCAPE</p>
         <h1>関空から<em>ウズベキスタンへ。</em></h1>
-        <p class="lead">9月21日出発・26日帰着、大人4名。日付・空港・人数を入力済みのリンクから、直販、比較サイト、第三国経由まで横断できます。</p>
+        <p class="lead">9月21日出発・26日帰着、大人4名。毎朝、価格再取得を試み、サイト上では前回確認価格と最新再調査ステータスを分けて表示します。各リンクは日付・空港・人数を入力済みです。</p>
         <div class="hero-actions">
-          <a class="button primary" href="https://www.skyscanner.jp/transport/flights/kix/tas/260921/260926/config/13068-2609211400--32690-1-16759-2609221940%7C16759-2609262100--32690-1-13068-2609272030?adultsv2=4&amp;cabinclass=economy&amp;rtn=1&amp;preferdirects=false" target="_blank" rel="noopener">4名・最安便を開く ↗</a>
-          <a class="button ghost" href="#search">入力済みリンクを比較</a>
+          <a class="button primary" href="https://www.skyscanner.jp/transport/flights/kix/tas/260921/260926/config/13068-2609211400--32690-1-16759-2609221940%7C16759-2609262100--32690-1-13068-2609272030?adultsv2=4&amp;cabinclass=economy&amp;rtn=1&amp;preferdirects=false" target="_blank" rel="noopener">Skyscannerで最新価格を開く ↗</a>
+          <a class="button ghost" href="#search">他サイトも今すぐ再検索</a>
         </div>
-        <p class="timestamp">調査日時：2026年6月21日 · 大人4名 · エコノミー · 往復</p>
+        <p class="timestamp">最新再調査：2026年6月27日 09:00 · 大人4名 · エコノミー · 往復</p>
         <div class="freshness" id="freshnessStatus" role="status"></div>
       </div>
       <div class="hero-visual" aria-label="KIXからTASへのフライトルート">
@@ -53,31 +53,31 @@
         </div>
         <div class="stamp stamp-b">TAS<br><small>TASHKENT</small></div>
         <div class="tile">
-          <span>BEST FOUND</span>
+          <span>LAST CONFIRMED FARE</span>
           <strong>¥477,120</strong>
-          <small>4名総額 · Skyscanner → TeaFlight · 往復</small>
+          <small>4名総額 · 前回確認値 · 最新価格はリンク先で再取得</small>
         </div>
       </div>
     </section>
 
     <section class="summary-strip" aria-label="検索サマリー">
-      <div><span>4名総額 最安</span><strong>¥477,120</strong></div>
+      <div><span>前回確認の最安</span><strong>¥477,120</strong></div>
       <div><span>1名あたり</span><strong>¥119,280</strong></div>
       <div><span>価格見通し</span><strong>上昇寄り · 確度 中</strong></div>
-      <div><span>予約判断</span><strong>総額52万円以下なら有力</strong></div>
+      <div><span>再調査ステータス</span><strong>6/27実行済み</strong></div>
     </section>
 
     <section class="section evidence" id="evidence">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">01 · LIVE COMPARISON</p>
-          <h2>同条件の実測比較</h2>
+          <p class="eyebrow">01 · LIVE CHECK</p>
+          <h2>前回確認価格と<br>リアルタイム再検索</h2>
         </div>
-        <p>2026年6月21日に、KIX発・TAS着、9月21日〜26日、大人4名エコノミー往復で実測。各行から人数・日付・空港を入力済みの検索結果へ移動します。</p>
+        <p>表示価格は最後に画面上で確認できた金額です。2026年6月27日の自動再調査では各OTAのbot/WAF/JavaScript制限により価格確定までは到達できませんでした。各行を押すと、人数・日付・空港を入力済みの最新検索へ移動します。</p>
       </div>
-      <div class="comparison-table" role="table" aria-label="販売サイト別の実測比較">
+      <div class="comparison-table" role="table" aria-label="販売サイト別の前回確認価格と最新再検索リンク">
         <div class="comparison-row comparison-head" role="row">
-          <span>検索先</span><span>表示価格</span><span>旅程</span><span>判定</span>
+          <span>検索先</span><span>前回確認価格</span><span>旅程</span><span>最新確認</span>
         </div>
         <a class="comparison-row winner" href="https://www.skyscanner.jp/transport/flights/kix/tas/260921/260926/config/13068-2609211400--32690-1-16759-2609221940%7C16759-2609262100--32690-1-13068-2609272030?adultsv2=4&amp;cabinclass=economy&amp;rtn=1&amp;preferdirects=false" target="_blank" rel="noopener" role="row">
           <span><b>Skyscanner → TeaFlight</b><small>4名・便まで入力済み</small></span>
@@ -86,7 +86,7 @@
             <i><b>往路</b> 9/21 14:00 KIX → 9/22 19:40 TAS<small>33時間40分 · PEK 23時間15分［深夜・翌日まで］</small></i>
             <i><b>復路</b> 9/26 21:00 TAS → 9/27 20:30 KIX<small>19時間30分 · 北京経由［深夜・翌日着］</small></i>
           </span>
-          <span class="status verified">4席 実測最安</span>
+          <span class="status verified">再検索可</span>
         </a>
         <a class="comparison-row" href="https://jp.trip.com/flights/showfarefirst?dcity=osa&amp;acity=tas&amp;ddate=2026-09-21&amp;rdate=2026-09-26&amp;dairport=kix&amp;triptype=rt&amp;class=y&amp;lowpricesource=searchform&amp;quantity=4&amp;searchboxarg=t&amp;nonstoponly=off&amp;locale=ja-JP&amp;curr=JPY" target="_blank" rel="noopener" role="row">
           <span><b>Trip.com</b><small>4名・日程入力済み</small></span>
@@ -95,7 +95,7 @@
             <i><b>往路</b> 9/21 14:00 KIX → 9/22 19:40 TAS<small>33時間40分 · PEK 23時間15分［深夜・翌日まで］</small></i>
             <i><b>復路</b> 検索結果から選択<small>選ぶ復路により総額・到着時刻が変わります</small></i>
           </span>
-          <span class="status verified">4席 実測</span>
+          <span class="status verified">再検索可</span>
         </a>
         <a class="comparison-row" href="https://www.skyscanner.jp/transport/flights/kix/tas/260921/260926/config/13068-2609211400--32690-1-16759-2609221940%7C16759-2609262100--32690-1-13068-2609272030?adultsv2=4&amp;cabinclass=economy&amp;rtn=1&amp;preferdirects=false" target="_blank" rel="noopener" role="row">
           <span><b>Skyscanner → Gotogate</b><small>4名・便まで入力済み</small></span>
@@ -104,7 +104,7 @@
             <i><b>往路</b> 9/21 14:00 KIX → 9/22 19:40 TAS<small>33時間40分 · PEK 23時間15分［深夜・翌日まで］</small></i>
             <i><b>復路</b> 9/26 21:00 TAS → 9/27 20:30 KIX<small>19時間30分 · PEK 11時間05分［深夜・翌日着］</small></i>
           </span>
-          <span class="status verified">4席 実測</span>
+          <span class="status verified">再検索可</span>
         </a>
         <a class="comparison-row" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTA5LTIxagcIARIDS0lYcgcIARIDVEFTGh4SCjIwMjYtMDktMjZqBwgBEgNUQVNyBwgBEgNLSVhAAUABQAFAAUgBcAGCAQsI____________AZgBAQ&amp;tfu=EgYIABAAGAA&amp;hl=ja" target="_blank" rel="noopener" role="row">
           <span><b>Google Flights</b><small>4名・日程入力済み</small></span>
@@ -113,17 +113,17 @@
             <i><b>最安</b> Korean Air＋Asiana・仁川経由<small>Googleでは4席そろうAir Chinaの安値枠が表示されず、10件のみ</small></i>
             <i><b>価格評価</b> 「現在の料金：高い」<small>日程を9/24–28にずらすと4名総額 ¥533,760</small></i>
           </span>
-          <span class="status high">高値</span>
+          <span class="status high">再検索可</span>
         </a>
       </div>
       <div class="finding">
-        <strong>結論：</strong> 同じAir China便をSkyscanner内8販売元、KAYAK内18販売元で比較。4名総額はTeaFlight ¥477,120、Air China直販 ¥484,640、Gotogate ¥484,906が先頭です。
+        <strong>結論：</strong> 前回確認では、同じAir China便をSkyscanner内8販売元、KAYAK内18販売元で比較。4名総額はTeaFlight ¥477,120、Air China直販 ¥484,640、Gotogate ¥484,906が先頭でした。最新価格は各入力済みリンクで毎回再検索してください。
       </div>
 
       <div class="provider-block">
         <div class="provider-title">
           <h3>同じAir China便：販売元8社</h3>
-          <p>Skyscannerの予約画面で確認した同一旅程・大人4名の総額。各項目から便指定済み画面へ移動できます。</p>
+          <p>Skyscannerの予約画面で前回確認した同一旅程・大人4名の総額。各項目から便指定済み画面へ移動し、最新価格を再取得できます。</p>
         </div>
         <div class="provider-grid provider-grid-prices">
           <a href="https://www.skyscanner.jp/transport/flights/kix/tas/260921/260926/config/13068-2609211400--32690-1-16759-2609221940%7C16759-2609262100--32690-1-13068-2609272030?adultsv2=4&amp;cabinclass=economy&amp;rtn=1&amp;preferdirects=false" target="_blank" rel="noopener"><b>TeaFlight</b><span>¥477,120</span><small>¥119,280/人</small></a>
@@ -139,7 +139,7 @@
       <div class="provider-block">
         <div class="provider-title">
           <h3>KAYAK：予約サイト18社の最安値</h3>
-          <p>大人4名検索で各販売元が提示した1名最安。販売元ごとに旅程が異なるため、単純な同一便比較ではありません。</p>
+        <p>前回の大人4名検索で各販売元が提示した1名最安。販売元ごとに旅程が異なるため、単純な同一便比較ではありません。</p>
         </div>
         <div class="provider-grid kayak-provider-grid">
           <span><b>Gotogate</b> ¥121,086</span>
@@ -175,7 +175,7 @@
       </div>
       <div class="price-meter" aria-label="推定適正価格帯">
         <div class="meter-marker" style="left: 15%">
-          <b>現在 ¥119,280/人</b><span>4席の最安実測</span>
+          <b>前回確認 ¥119,280/人</b><span>最新価格はリンク先で再取得</span>
         </div>
         <div class="meter-band bargain"><span>買い</span><b>〜¥130k</b></div>
         <div class="meter-band fair"><span>適正</span><b>¥130–170k</b></div>
@@ -183,11 +183,11 @@
         <div class="meter-band premium"><span>割高</span><b>¥210k〜</b></div>
       </div>
       <div class="fair-cards">
-        <article><span>現在の位置</span><strong>4名総額47.7万円は買い帯</strong><p>北京で23時間超の乗継を許容できるなら、1名119,280円は推定適正帯を下回ります。</p></article>
+        <article><span>前回確認値</span><strong>4名総額47.7万円は買い帯</strong><p>北京で23時間超の乗継を許容できるなら、1名119,280円は推定適正帯を下回ります。購入前に必ずリンク先で最新総額を再確認してください。</p></article>
         <article><span>同時期の特殊要因</span><strong>2026年はシルバーウィーク</strong><p>9月19〜23日の5連休に出発日が重なります。通常年の9月より日本発需要が強くなりやすい日程です。</p></article>
         <article><span>季節性</span><strong>9月は観光需要が平均超</strong><p>2024年の訪問者構成では9月が年間の9.0%。月平均8.3%を上回り、気候の良い秋は需要が落ちにくい時期です。</p></article>
       </div>
-      <p class="method-note">「適正価格」は未来の価格保証ではなく、価格実測は2026年6月21日、外部要因の見通しは2026年6月27日時点の推定です。4席を同じ予約クラスで確保できない場合、総額は急に上がります。</p>
+      <p class="method-note">「適正価格」は未来の価格保証ではなく、価格の前回確認は2026年6月21日、外部要因と価格再取得の試行は2026年6月27日時点です。4席を同じ予約クラスで確保できない場合、総額は急に上がります。</p>
     </section>
 
     <section class="section outlook" id="outlook">
@@ -232,7 +232,7 @@
           <p class="eyebrow">04 · SHORTLIST</p>
           <h2>価格と時間で選ぶ候補</h2>
         </div>
-        <p>複数サイトで実測した候補を混在表示。販売元、手荷物、自己乗継の有無をカード内に明記しました。</p>
+        <p>前回確認できた候補を混在表示。販売元、手荷物、自己乗継の有無をカード内に明記しました。各カードから最新価格を再検索できます。</p>
       </div>
 
       <div class="filter-bar" role="group" aria-label="候補の絞り込み">
@@ -251,7 +251,7 @@
       <div>
         <p class="eyebrow">PRICE VS. TIME</p>
         <h3>4席の在庫取得先だけで、総額約34万円の差。</h3>
-        <p>Skyscannerの北京経由は <strong>総額¥477,120・往路33時間40分</strong>。Googleの4名最安は <strong>総額¥823,920</strong>。人数を4名にしたまま比較することが最重要です。</p>
+        <p>前回確認ではSkyscannerの北京経由が <strong>総額¥477,120・往路33時間40分</strong>。Googleの4名最安は <strong>総額¥823,920</strong>。人数を4名にしたまま最新検索を比較することが最重要です。</p>
       </div>
       <a href="#shortlist">候補を比較 ↓</a>
     </section>
@@ -270,7 +270,7 @@
           <span class="route-number">01</span>
           <div class="route-codes"><b>KIX</b><i>→</i><b>PEK</b><i>→</i><b>TAS</b></div>
           <h3>北京</h3>
-          <p>今回の4名最安。KAYAKとTrip.comで1名12.1〜12.2万円。往路の待ち時間は23時間15分。</p>
+          <p>前回確認の4名最安。KAYAKとTrip.comで1名12.1〜12.2万円。往路の待ち時間は23時間15分。</p>
           <span class="tag">4名総額 ¥477,120〜</span>
         </article>
         <article class="route-card">
@@ -318,7 +318,7 @@
           <p class="eyebrow">06 · SEARCH WIDE</p>
           <h2>横断検索リンク</h2>
         </div>
-        <p>主な比較サイトはKIX・TAS・9/21–26・大人4名を入力済みです。条件を引き継げないサイトはその旨を表示しています。</p>
+        <p>主な比較サイトはKIX・TAS・9/21–26・大人4名を入力済みです。ここから開くたびに各予約サイト側で最新価格を再検索します。</p>
       </div>
 
       <div class="search-tabs" role="tablist" aria-label="検索リンクの分類">
@@ -340,7 +340,7 @@
       </div>
       <ol class="steps">
         <li><span>01</span><div><h3>必ず大人4名のまま再現</h3><p>KAYAK、Trip.com、Skyscannerを4名条件で開き、4席分の最終総額を確認する。</p></div></li>
-        <li><span>02</span><div><h3>最終総額52万円以下なら有力</h3><p>現在の4名最安は約47.7万円。数千円差より変更条件、荷物、乗継時間、問い合わせ窓口を優先。</p></div></li>
+        <li><span>02</span><div><h3>最終総額52万円以下なら有力</h3><p>前回確認の4名最安は約47.7万円。数千円差より変更条件、荷物、乗継時間、問い合わせ窓口を優先。</p></div></li>
         <li><span>03</span><div><h3>Air China直販で同便を確認</h3><p>直販との差が小さければ直販を優先。公式サイトの自動検索では日付UIから先の価格取得ができなかったため、手動確認が必要。</p></div></li>
         <li><span>04</span><div><h3>8販売元の決済直前総額を比較</h3><p>TeaFlight、Air China、Gotogate、Flightnetwork、Trip.com、Expedia、エアトリ、Booking.comで荷物・カード手数料込みの金額を確認。</p></div></li>
       </ol>
@@ -361,7 +361,7 @@
       </div>
       <div class="sources">
         <h3>判断に使った主な根拠</h3>
-        <a href="https://www.kayak.co.jp/flights/KIX-TAS/2026-09-21/2026-09-26/4adults?fs=fdDir%3Dfalse&amp;sort=price_a" target="_blank" rel="noopener">KAYAK：大人4名の実測価格 ↗</a>
+        <a href="https://www.kayak.co.jp/flights/KIX-TAS/2026-09-21/2026-09-26/4adults?fs=fdDir%3Dfalse&amp;sort=price_a" target="_blank" rel="noopener">KAYAK：大人4名の最新検索 ↗</a>
         <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTA5LTIxagcIARIDS0lYcgcIARIDVEFTGh4SCjIwMjYtMDktMjZqBwgBEgNUQVNyBwgBEgNLSVhAAUABQAFAAUgBcAGCAQsI____________AZgBAQ&amp;tfu=EgYIABAAGAA&amp;hl=ja" target="_blank" rel="noopener">Google Flights：大人4名の価格・価格評価 ↗</a>
         <a href="https://www.businessinsider.com/flight-prices-stay-high-despite-us-peace-deal-iran-2026-6" target="_blank" rel="noopener">2026年6月17日：燃料低下後も運賃高止まりとの分析 ↗</a>
         <a href="https://www.theguardian.com/business/2026/jun/07/air-fare-rises-inevitable-as-airlines-face-extra-100bn-jet-fuel-bill-this-year" target="_blank" rel="noopener">IATA発言を報じた燃料費・運賃見通し ↗</a>
@@ -383,10 +383,10 @@
 
   <footer>
     <div class="brand"><span class="brand-mark">UZ</span><span>KIX Flight Finder</span></div>
-    <p>Built for 4 adults · 21–26 September 2026 · Fare measured 21 June / outlook checked 27 June 2026</p>
+    <p>Built for 4 adults · 21–26 September 2026 · Rechecked 27 June 2026 · fares shown as last confirmed values</p>
     <a href="#top">TOP ↑</a>
   </footer>
 
-  <script src="./app.js?v=20260621-6"></script>
+  <script src="./app.js?v=20260627-rt1"></script>
 </body>
 </html>
