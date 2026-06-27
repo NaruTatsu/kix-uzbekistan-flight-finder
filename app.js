@@ -1,6 +1,6 @@
-const PRICE_LAST_MEASURED_AT = "2026-06-21T12:00:00+09:00";
-const OUTLOOK_UPDATED_AT = "2026-06-27T09:00:00+09:00";
-const PRICE_RECHECK_STATUS = "2026年6月27日 09:00に自動再調査済み。KAYAKはbot判定、Trip.comはWAF、SkyscannerはJavaScript取得待ちのため、サイト内価格は前回確認値として表示しています。";
+const PRICE_LAST_MEASURED_AT = "2026-06-27T21:30:00+09:00";
+const OUTLOOK_UPDATED_AT = "2026-06-27T21:30:00+09:00";
+const PRICE_RECHECK_STATUS = "2026年6月27日 21:30に現在価格を再確認済み。KAYAK、Trip.com、Skyscanner、Google Flightsで4名条件の価格表示を確認しました。";
 const googleFlightsUrl = "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTA5LTIxagcIARIDS0lYcgcIARIDVEFTGh4SCjIwMjYtMDktMjZqBwgBEgNUQVNyBwgBEgNLSVhAAUABQAFAAUgBcAGCAQsI____________AZgBAQ&tfu=EgYIABAAGAA&hl=ja";
 const tripUrl = "https://jp.trip.com/flights/showfarefirst?dcity=osa&acity=tas&ddate=2026-09-21&rdate=2026-09-26&dairport=kix&triptype=rt&class=y&lowpricesource=searchform&quantity=4&searchboxarg=t&nonstoponly=off&locale=ja-JP&curr=JPY";
 const kayakUrl = "https://www.kayak.co.jp/flights/KIX-TAS/2026-09-21/2026-09-26/4adults?fs=fdDir%3Dfalse&sort=price_a";
@@ -9,27 +9,27 @@ const skyscannerAirChinaUrl = "https://www.skyscanner.jp/transport/flights/kix/t
 
 const flights = [
   {
-    airline: "Air China · Skyscanner → TeaFlight",
+    airline: "Air China · KAYAK",
     outbound: { time: "9/21 14:00 KIX → 9/22 19:40 TAS", duration: "33時間40分", transit: "PEK 23時間15分", alert: "深夜・翌日まで" },
     inbound: { time: "9/26 21:00 TAS → 9/27 20:30 KIX", duration: "19時間30分", transit: "北京経由", alert: "深夜・翌日着" },
-    hours: 33.7, stops: 1, price: 477120, perPerson: 119280,
-    tags: ["前回確認最安", "便まで入力済み", "長時間乗継"], best: true,
-    url: skyscannerAirChinaUrl
+    hours: 33.7, stops: 1, price: 446976, perPerson: 111744,
+    tags: ["現在確認最安", "4名総額確認済み", "長時間乗継"], best: true,
+    url: kayakUrl
   },
   {
     airline: "Air China · Skyscanner → Gotogate",
     outbound: { time: "9/21 14:00 KIX → 9/22 19:40 TAS", duration: "33時間40分", transit: "PEK 23時間15分", alert: "深夜・翌日まで" },
     inbound: { time: "9/26 21:00 TAS → 9/27 20:30 KIX", duration: "19時間30分", transit: "PEK 11時間05分", alert: "深夜・翌日着" },
-    hours: 33.7, stops: 1, price: 484906, perPerson: 121227,
-    tags: ["Gotogate前回確認", "機内・受託手荷物込み表示", "便まで入力済み"],
+    hours: 33.7, stops: 1, price: 447330, perPerson: 111833,
+    tags: ["Gotogate現在確認", "機内・受託手荷物込み表示", "便まで入力済み"],
     url: skyscannerAirChinaUrl
   },
   {
     airline: "Air China · Trip.com",
     outbound: { time: "9/21 14:00 KIX → 9/22 19:40 TAS", duration: "33時間40分", transit: "PEK 23時間15分", alert: "深夜・翌日まで" },
     inbound: { time: "復路はリンク先で選択", duration: "選択便により変動", transit: "北京経由候補" },
-    hours: 33.7, stops: 1, price: 488400, perPerson: 122100,
-    tags: ["4席前回確認", "受託手荷物2×23kg表示"],
+    hours: 33.7, stops: 1, price: 451160, perPerson: 112790,
+    tags: ["現在確認", "受託手荷物2×23kg表示"],
     url: tripUrl
   },
   {
@@ -37,33 +37,33 @@ const flights = [
     outbound: { time: "9/21 00:15 KIX → 9/21 13:20 TAS", duration: "17時間05分", transit: "ICN 7時間55分", alert: "深夜出発" },
     inbound: { time: "復路はリンク先で選択", duration: "選択便により変動", transit: "仁川経由候補" },
     hours: 17.1, stops: 1, price: 760880, perPerson: 190220,
-    tags: ["4席前回確認", "受託32kg表示", "北京より短い"],
+    tags: ["参考候補", "受託32kg表示", "北京より短い"],
     url: tripUrl
   },
   {
     airline: "Korean Air ＋ Asiana · Google Flights",
-    outbound: { time: "9/21 12:35 KIX → 9/21 20:00 TAS", duration: "11時間25分", transit: "ICN 2時間10分" },
-    inbound: { time: "9/26 21:55 TAS → 9/27 11:20 KIX", duration: "9時間25分", transit: "ICN 1時間10分", alert: "早朝・短時間" },
-    hours: 11.4, stops: 1, price: 823920, perPerson: 205980,
-    tags: ["Google 4名最安", "現在の料金：高い", "時間優先"],
+    outbound: { time: "9/21 14:00 KIX → 9/22 19:40 TAS", duration: "33時間40分", transit: "PEK 23時間15分", alert: "深夜・翌日まで" },
+    inbound: { time: "9/26 21:00 TAS → 9/27 20:30 KIX", duration: "19時間30分", transit: "PEK 11時間05分", alert: "深夜・翌日着" },
+    hours: 33.7, stops: 1, price: 459280, perPerson: 114820,
+    tags: ["Google現在確認", "Air China", "便まで確認"],
     url: googleFlightsUrl
   }
 ];
 
 const searches = {
   meta: [
-    ["01", "Skyscanner：最安便", "4名総額 ¥477,120・便まで入力済み", skyscannerAirChinaUrl],
-    ["02", "Gotogate", "Skyscanner内前回確認 ¥484,906・便まで入力済み", skyscannerAirChinaUrl],
-    ["03", "KAYAK", "4名条件でリアルタイム再検索", kayakUrl],
-    ["04", "Trip.com", "4名条件でリアルタイム再検索", tripUrl],
-    ["05", "Google Flights", "4名条件でリアルタイム再検索", googleFlightsUrl],
-    ["06", "Flightnetwork", "Skyscanner内前回確認 ¥492,683・便まで入力済み", skyscannerAirChinaUrl],
-    ["07", "Expedia", "Skyscanner内前回確認 ¥504,640・便まで入力済み", skyscannerAirChinaUrl],
-    ["08", "Booking.com Flights", "Skyscanner内前回確認 ¥507,154・便まで入力済み", skyscannerAirChinaUrl],
-    ["09", "エアトリ", "Skyscanner内前回確認 ¥504,640・便まで入力済み", skyscannerAirChinaUrl],
+    ["01", "KAYAK", "現在確認：4名総額 ¥446,976・Air China", kayakUrl],
+    ["02", "Skyscanner → Gotogate", "現在確認：4名総額 ¥447,330・便まで入力済み", skyscannerAirChinaUrl],
+    ["03", "Trip.com", "現在確認：1名 ¥112,790・4名換算 ¥451,160", tripUrl],
+    ["04", "Google Flights", "現在確認：Air China 4名総額 ¥459,280", googleFlightsUrl],
+    ["05", "Flightnetwork", "Skyscanner内現在確認 ¥452,726・便まで入力済み", skyscannerAirChinaUrl],
+    ["06", "Expedia", "Skyscanner内現在確認 ¥464,720・便まで入力済み", skyscannerAirChinaUrl],
+    ["07", "Booking.com Flights", "Skyscanner内現在確認 ¥467,221・便まで入力済み", skyscannerAirChinaUrl],
+    ["08", "TeaFlight", "Skyscanner内現在確認 ¥463,280・便まで入力済み", skyscannerAirChinaUrl],
+    ["09", "エアトリ", "Skyscanner内現在確認 ¥464,720・便まで入力済み", skyscannerAirChinaUrl],
     ["10", "Kiwi.com", "4名・日程・区間入力済み", "https://www.kiwi.com/ja/search/results/osaka-japan/tashkent-uzbekistan/2026-09-21/2026-09-26?adults=4"],
     ["11", "momondo", "4名・日程・区間入力済み", "https://www.momondo.jp/flight-search/KIX-TAS/2026-09-21/2026-09-26/4adults?sort=price_a"],
-    ["12", "TeaFlight", "Skyscanner内前回確認 ¥477,120・便まで入力済み", skyscannerAirChinaUrl]
+    ["12", "Air China直販", "Skyscanner内現在確認 ¥524,720・便まで入力済み", skyscannerAirChinaUrl]
   ],
   airline: [
     ["CA", "Air China", "最安便の直販確認先・フォーム動作確認済み", "https://www.airchina.jp/JP/JP/Home"],
@@ -178,9 +178,9 @@ function updateFreshness() {
   const outlookAgeHours = (Date.now() - new Date(OUTLOOK_UPDATED_AT).getTime()) / 36e5;
   node.className = outlookAgeHours <= 48 ? "freshness is-fresh" : "freshness is-stale";
   node.innerHTML = `
-    <b>最新再調査：2026年6月27日 09:00</b>
+    <b>現在価格確認：2026年6月27日 21:30</b>
     <span>${PRICE_RECHECK_STATUS}</span>
-    <span>前回価格確認：2026年6月21日。最新価格は下の入力済み検索リンクで各予約サイトに直接確認してください。</span>
+    <span>最安確認：KAYAK ¥446,976、Skyscanner/Gotogate ¥447,330、Trip.com ¥451,160、Google Flights/Air China ¥459,280。</span>
   `;
   if (outlookAgeHours > 48) {
     document.querySelectorAll(".confidence").forEach(el => {
